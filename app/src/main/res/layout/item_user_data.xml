@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.e.enfecassigmentkotlin.module.ui.adapter.DataAdapter" />
+
+        <variable
+            name="uiModel"
+            type="com.e.enfecassigmentkotlin.domain.model.uimodel.UIModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/compName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:letterSpacing="-0.02"
+            android:text="@{uiModel.company_name}"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="16sp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/compName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:letterSpacing="-0.02"
+            android:text="@{uiModel.title}"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/body"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="12dp"
+
+            android:gravity="start"
+            android:letterSpacing="-0.02"
+            android:text="@{uiModel.body}"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</layout>
